@@ -1,0 +1,15 @@
+@font-face {
+   font-family: 'Jost-Bold';
+   font-display: swap;
+   src: url('Jost-Bold/font.ttf');
+}
+@font-face {
+   font-family: 'Jost-Regular';
+   font-display: swap;
+   src: url('Jost-Regular/font.ttf');
+}
+@font-face {
+   font-family: 'Jost-Medium';
+   font-display: swap;
+   src: url('Jost-Medium/font.ttf');
+}
