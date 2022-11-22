@@ -7,3 +7,14 @@ In der Datenschutzerklärung sind Informationen zur Verwendung und der Funktions
 Grundlage hierfür siehe:
 https://www.ihk.de/halle/recht/datenschutz/sonstige-rechtsinformationen/cookie-banner-fuenf-fehler-die-sie-vermeiden-sollten--4854218
 https://barth-datenschutz.de/cookie-banner-auf-jeder-webseite/
+
+Keine Google Fonts enthalten
+
+v7.0
+-----
+Angebotsflyer Olivenöl auf der Startseite
+Willkommenstext auf der Startseite
+
+Wochenangebote nun auch mit Angebotsflyer Olivenöl zusätzlich
+
+
