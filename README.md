@@ -20,3 +20,7 @@ Wochenangebote nun auch mit Angebotsflyer Olivenöl zusätzlich
 v8.0
 -----
 Mit Gewinner des Trikots aus der Verlosung auf der Startseite
+
+v9.0
+-----
+Mit Verlinkung auf Instagram Account
