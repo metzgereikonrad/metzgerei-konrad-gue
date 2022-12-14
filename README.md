@@ -24,3 +24,7 @@ Mit Gewinner des Trikots aus der Verlosung auf der Startseite
 v9.0
 -----
 Mit Verlinkung auf Instagram Account
+
+v10.0
+-----
+wie v7.0 mit Werbung für KW50/51
