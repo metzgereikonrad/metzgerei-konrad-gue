@@ -10,6 +10,9 @@ https://barth-datenschutz.de/cookie-banner-auf-jeder-webseite/
 
 Keine Google Fonts enthalten
 
+Logo kostenlos verwendbar ohne Lizenz und Bildverweis
+https://pixabay.com/de/vectors/schwein-schweinefleisch-575824/?download
+
 v7.0
 -----
 Angebotsflyer Olivenöl auf der Startseite
