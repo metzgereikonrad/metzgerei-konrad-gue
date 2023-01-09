@@ -31,3 +31,8 @@ Mit Verlinkung auf Instagram Account
 v10.0
 -----
 wie v7.0 mit Werbung für KW50/51
+
+v11.0
+------
+Geänderte Werbung statt Olivenöl nun mit der Heißen Theke mit Werbung für KW2/3
+
