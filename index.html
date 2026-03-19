@@ -250,6 +250,17 @@
   .nav-instagram{ margin-left:0; padding-top:0.25rem; }
 }
 
+
+/* --- Google StreetView / Maps: Click-to-Load (DSGVO) --- */
+.gmap-consent{width:100%;max-width:900px;margin:2rem auto 0;}
+.gmap-placeholder{border:1px solid rgba(0,0,0,0.12);border-radius:16px;padding:1.25rem;background:#fff;box-shadow:0 15px 40px rgba(0,0,0,0.08);text-align:center;}
+.gmap-placeholder p{margin:0.4rem 0;line-height:1.45;}
+.gmap-accept{margin-top:0.8rem;background:var(--accent);border:none;padding:0.65rem 1.1rem;color:#fff;border-radius:30px;cursor:pointer;transition:0.2s;}
+.gmap-accept:hover{transform:scale(1.03);}
+.gmap-links{margin-top:0.8rem;font-size:0.95rem;}
+.gmap-links a{color:var(--primary);text-decoration:none;}
+.gmap-links a:hover{text-decoration:underline;}
+
 </style>
 </head>
 <body>
@@ -361,6 +372,28 @@
   </div>
 </section>
 
+<!-- 360° Rundgang (Google StreetView) – DSGVO Click-to-Load -->
+<div class="gmap-consent"
+     data-src="https://www.google.com/maps/embed?pb=!4v1764689729251!6m8!1m7!1sCAoSHENJQUJJaEM0SEJlWHRIQkxFUTFUbm5jd2MzbUY.!2m2!1d49.86876564744364!2d9.905954076192176!3f215.54668994896232!4f2.6046942281750205!5f0.4000000000000002"
+     data-width="100%"
+     data-height="450"
+     data-title="360° Rundgang – Metzgerei Konrad">
+
+  <div class="gmap-placeholder">
+    <p><strong>360°‑Rundgang ist deaktiviert</strong></p>
+    <p>
+      Erst nach dem Aktivieren wird eine Verbindung zu Google hergestellt.
+      Dabei können personenbezogene Daten (z.&nbsp;B. IP‑Adresse) übertragen werden.
+    </p>
+    <button type="button" class="gmap-accept">
+      Akzeptieren &amp; Rundgang laden
+    </button>
+    <p style="margin-top:10px;">
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
+  </div>
+</div>
+
 <section class="section" id="kontakt">
   <h2>Kontakt & Öffnungszeiten</h2>
   <br>
@@ -439,6 +472,43 @@
     });
   }
 
+
+
+  // --- Google StreetView / Maps: Click-to-Load (DSGVO) ---
+  (function(){
+    const KEY = 'consent_google_streetview';
+    function createIframe(container){
+      const src = container.getAttribute('data-src');
+      const w = container.getAttribute('data-width') || '100%';
+      const h = container.getAttribute('data-height') || '450';
+      const title = container.getAttribute('data-title') || 'Google Maps';
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.width = w;
+      iframe.height = h;
+      iframe.style.border = '0';
+      iframe.loading = 'lazy';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.setAttribute('title', title);
+      container.innerHTML = '';
+      container.appendChild(iframe);
+    }
+
+    document.querySelectorAll('.gmap-consent').forEach(container => {
+      if(localStorage.getItem(KEY) === 'true'){
+        createIframe(container);
+        return;
+      }
+      const btn = container.querySelector('.gmap-accept');
+      if(btn){
+        btn.addEventListener('click', () => {
+          localStorage.setItem(KEY, 'true');
+          createIframe(container);
+        });
+      }
+    });
+  })();
 </script>
 
 </body>
